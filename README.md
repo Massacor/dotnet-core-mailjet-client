@@ -69,7 +69,7 @@ public FooService(IMailjetApiClient iMailjetApiClient)
 
 You can use the `SendMail` method by following the example below to send an email via a Mailjet Template.
 
-:information_source: Some parameters are optionals (attachementFiles, variables, Cc mails)
+:information_source: Some parameters are optionals (attachementFiles, variables, Cc mails, Bcc mails)
 
 ```cs
 var mailjetMail = new MailjetMail(){
@@ -85,6 +85,7 @@ var mailjetMail = new MailjetMail(){
     };
 
     UsersInCc = new List<User>(){new User(){Email = "mailCc@unitee.io"}},
+    UsersInBcc = new List<User>(){new User(){Email = "mailBCc@unitee.io"}},
     AttachmentFiles = new List<MailAttachmentFile>(){
          new MailAttachmentFile()
          {
